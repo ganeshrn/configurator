@@ -1,0 +1,15 @@
+---
+- hosts: network
+  gather_facts: no
+  tasks:
+  - name: collect vlan facts for {{ ansible_network_os }}
+    nxos_facts:
+      gather_network_resources: "{{ resources }}"
+    register: nxos_vlan_facts
+    when: ansible_network_os == 'nxos'
+
+  - name: collect vlan facts for {{ ansible_network_os }}
+    junos_facts:
+      gather_network_resources: "{{ resources }}"
+    register: junos_vlan_facts
+    when: ansible_network_os == 'junos'

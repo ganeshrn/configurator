@@ -1,0 +1,15 @@
+---
+- hosts: network
+  gather_facts: no
+  tasks:
+  - name: vlans edit with action {{ vlans_action }} for {{ ansible_network_os }}
+    nxos_vlans:
+      config: "{{ vlans_config }}"
+      state: "{{ vlans_action }}"
+    when: ansible_network_os == 'nxos'
+
+  - name: manage vlan for {{ ansible_network_os }}
+    junos_vlans:
+      config: "{{ vlans_config }}"
+      state: "{{ vlans_action }}"
+    when: ansible_network_os == 'junos'

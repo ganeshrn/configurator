@@ -1,0 +1,12 @@
+[
+  {
+    "vlan_id": 2,
+    "name": "test2",
+    "description": "test vlan 2"
+  },
+  {
+    "vlan_id": 3,
+    "name": "test3",
+    "description": "test vlan 3"
+  }
+]
