@@ -10,6 +10,7 @@ Network device configuration app
     mysql> create database db;
     mysql> exit
     ```
+3) Python version >= 3.7 installed
 
 # Installation
   ```
