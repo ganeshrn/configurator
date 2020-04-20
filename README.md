@@ -51,31 +51,31 @@ a `vlans` table in `db` database with columns `vlan_id`, `name`, `description`.
    value. The default level is `INFO`. Value values are `INFO`, `DEBUG`, `WARNING`.
 
    The API's supported by this app:
-   1) GET: /config/vlans
+   1) **GET: /config/vlans**
    Fetches vlan_id, name and description from database and returns it
    as a list of dictionaries, if no vlans avaliable it will return empty
    list. Currently after fetching the vlans from database it also sync's
    it on network device to ensure no drift in entries between database and
    config on devices.
 
-   2) GET: /config/vlans/<int:vlan_id>
+   2) **GET: /config/vlans/<int:vlan_id>**
    Queries database to fetch vlan_id record, if no vlan_id not found error
    response is returned with 404. Currently after fetching the vlan record from database
    it also sync's it on network device to ensure no drift in entries between database and
    config on devices.
 
-   3) POST: /config/vlans
+   3) **POST: /config/vlans**
    Create the vlans provided as the request body in database and sync's it on
    the network deivce. If the record already exit in database it return error
    reposne with 400 return code.
 
-   4) PUT: /config/vlans/<int:vlan_id>
+   4) **PUT: /config/vlans/<int:vlan_id>**
    If the vlan_id provided as input in URL is present in database
    the record will be updated from the body of request. If the record
    is not present it will create a new record. The same record will be synced
    with network device.
 
-   5) DELETE: /config/vlans/<int:vlan_id>/<string:name>
+   5) **DELETE: /config/vlans/<int:vlan_id>/<string:name>**
    If the combination of vlan_id and name provided as input in URL is present in database
    the record will be deleted and True is return in response. If the record is
    not present it return error respone with 404 return code.
