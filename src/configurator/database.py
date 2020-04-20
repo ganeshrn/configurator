@@ -6,7 +6,6 @@ Purpose: A simple Flask app that manages vlan configuration on network device.
 """
 import os
 import json
-import logging
 
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy

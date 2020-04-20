@@ -83,9 +83,9 @@ a `vlans` table in `db` database with columns `vlan_id`, `name`, `description`.
 **Note**: Reference postman URL are stored in `postman/` directory.
 
 2) Synchronizer
-* This python program fetches the vlan configuration at regular interval from
-the device. The `interval` config option under `synchronizer` section in config
-file.
+* This python program fetches the vlan configuration at regular interval (default 10 seconds) from
+the device. The `interval` config option is defined under `synchronizer` section in
+the app config file with default path `src/configuration/config/configurator.cfg`.
 
 * If the vlan record in database is different from the fetched config from device,
 the database will be updated to reflect the same config on device.

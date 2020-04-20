@@ -9,7 +9,7 @@ import os
 import ansible_runner
 
 from database import app
-import pdb
+
 
 class AnsibleManageVlans(object):
     def __init__(self, private_data_dir=None):

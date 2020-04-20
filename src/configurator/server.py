@@ -10,7 +10,6 @@ from sqlalchemy.exc import IntegrityError
 from database import db, app, Vlans, update_vlans_db
 from configurator.provider import manage
 
-import pdb
 manage_vlans = manage.ManageVlans()
 
 
