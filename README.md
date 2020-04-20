@@ -28,6 +28,9 @@ python src/configurator/server.py
 ```
 
 Running synchronizer to sync device config and database.
+```
+python src/configurator/synchronizer.py
+```
 # Documentation
 
 This application has two parts:
